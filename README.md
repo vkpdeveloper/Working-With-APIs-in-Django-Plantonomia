@@ -34,6 +34,6 @@ pip3 install BeautifulSoup4 (Linux)
 ```
 ### How to install Django
 ```python
-pip install Django (Windows)
-pip3 install Django (Linux)
+pip install django (Windows)
+pip3 install django (Linux)
 ```
