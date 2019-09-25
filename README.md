@@ -1,2 +1,39 @@
 # Working-With-APIs-in-Django
-In this whole project I have used an Plants Info API and call the JSON. 
+Hello friends, In this whole project you are going learn about How to work with APIs in Django and to go ahead you in the working of APIs and JSON in Django. I recommend you to see all the Prerequisite.
+
+### Prerequisite for this Project
+1. Knowledge about Python
+2. Knowledge about Django
+3. Working with JSON
+4. How JSON works ?
+5. Working with Requests Module
+6. IDE Like :- VS Code, PyCharm
+7. HTML, CSS
+
+### Physical Prerequisite for this Project
+1. Laptop (Minimum 2GB Ram)
+2. Internet
+
+### Used Modules & Framework
+1. Requests
+2. JSON
+3. BeautifulSoup4
+4. Django (Framework)
+
+## Installations
+
+### How to install Requests in Python
+```python
+pip install requests (Windows)
+pip3 install requests (Linux)
+```
+### How to install BeautifulSoup4
+```python
+pip install BeautifulSoup4 (Windows)
+pip3 install BeautifulSoup4 (Linux)
+```
+### How to install Django
+```python
+pip install Django (Windows)
+pip3 install Django (Linux)
+```
