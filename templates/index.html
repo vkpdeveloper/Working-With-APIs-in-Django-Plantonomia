@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <link rel="icon" href="{% static 'img/logo.png' %}"/>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-pink.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Plantonomia ~ Working with APIs in Django with Python</title>
+  </head>
+  <body>
+    <!--CSS is Here-->
+    <style>
+    .main-hed{
+      margin-top: 80px;
+      font-family: 'Comfortaa', cursive;
+      text-align: center;
+    }
+    .text-all{
+      font-family: 'Comfortaa', cursive;
+    }
+    .search_body{
+      width: 50%;
+      height: 20%;
+      margin-top: 90px;
+    }
+    </style>
+
+    <!--Navbar is here-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <a style="font-family: 'Comfortaa', cursive; margin-left:8px;" class="navbar-brand" href="#">
+    <img src="{% static 'img/logo.png' %}" style="width: 30px; height: 30px;">
+  Plantonomia ~ By Vaibhav Pathak</a>
+</nav>
+
+<!--Main content start from here-->
+
+<div class="main">
+  <h1 class="main-hed">Welcome to Plantonomia</h1>
+  <center>
+    <div class="card search_body" align=center>
+      <div class="card-body">
+      <form method="POST" action="/details"> {% csrf_token %}
+        <div class="form-group row">
+          <label for="inputPassword" class="col-sm-2 col-form-label text-all">Search</label>
+            <div class="col-sm-10">
+              <input name="search" type="text" class="form-control text-all" id="inputPassword" placeholder="Enter your plant name here">
+            </div>
+          </div>
+          <button style="margin-left: 90%" id="search-button" type="submit" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+            <i class="material-icons">search</i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </center>
+</div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
