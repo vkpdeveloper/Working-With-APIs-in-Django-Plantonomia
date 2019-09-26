@@ -17,7 +17,6 @@ Hello friends, In this whole project you are going learn about How to work with 
 ### Used Modules & Framework
 1. Requests
 2. JSON
-3. BeautifulSoup4
 4. Django (Framework)
 
 ## Installations
@@ -26,11 +25,6 @@ Hello friends, In this whole project you are going learn about How to work with 
 ```python
 pip install requests (Windows)
 pip3 install requests (Linux)
-```
-### How to install BeautifulSoup4
-```python
-pip install BeautifulSoup4 (Windows)
-pip3 install BeautifulSoup4 (Linux)
 ```
 ### How to install Django
 ```python
