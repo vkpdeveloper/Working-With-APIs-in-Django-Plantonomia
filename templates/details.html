@@ -1,41 +1,88 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     {% load static %}
-    <meta charset="utf-8">
-    <link rel="icon" href="{% static 'img/logo.png' %}"/>
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <link rel="icon" href="{% static 'img/logo.png' %}" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
 
-    <title> {{ title }} </title>
+    <title>{{ title }}</title>
   </head>
   <body>
-      <style>
-          .main_hed{
-              margin : 20px 100px 20px 100px;
-              font-family: 'Comfortaa', cursive;
-              box-shadow: -5px 5px;
-          }
-          .data{
-              align-content: center;
-              text-align: center;
-          }
-      </style>
-      {% for i in data %}
-      <div class="card main_hed">
-        {% for key, values in i.items %}
-        <div class="card-body data">
-            {{ key|upper|add:" :- "  }}
-            {{ values|title }}
-        </div>
-        {% endfor %}
+    <style>
+      .main_hed {
+        font-family: "Comfortaa", cursive;
+      }
+      .table-class{
+        width: 90%;
+        text-align: center;
+        margin-left: 80px;
+        margin-right: 80px;
+      }
+      .data {
+        align-content: center;
+        text-align: center;
+      }
+    </style>
+    <h1 class="main_hed text-center p-5">Details Fetched Successfully</h1>
+    <div class="main_hed data table-class">
+        <table class="table table-dark text-center main_hed">
+          <thead>
+            <tr class="main_hed">
+              <th scope="col">Plant ID</th>
+              <th scope="col">Slug</th>
+              <th scope="col">Scientific Name</th>
+              <th scope="col">Common Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for i in data %}
+            <tr class="main_hed">
+              <td>{{ i.id }}</td>
+              <td>{{ i.slug | upper }}</td>
+              <td>{{ i.scientific_name | upper }}</td>
+              <td>{{ i.common_name | upper }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
       </div>
-      {% endfor %}
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
